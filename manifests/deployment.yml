@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: intercepypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: intercepypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: intercepypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: intercepypipelinesjavascriptdocker 
+          image: mycontainerregistrycepy.azurecr.io/intercepypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
